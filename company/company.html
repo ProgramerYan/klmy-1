@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html ng-app=graph>
+<head>
+<meta charset=utf-8>
+<title>天眼查-人人都在用企业信息调查工具_企业信息查询_公司查询_工商查询_信用查询平台</title>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" charset=UTF-8>
+<meta name=description content="">
+<script src=js/lzma-min.js></script>
+<script src=js/lzma_worker-min.js></script>
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<link rel=stylesheet href=css/vendor.css>
+<link rel=stylesheet href=css/app.css>>
+<script>var Setting = {
+      images: {}
+    };
+
+
+    window.GraphSetting = Setting;</script><style>.graph-company-btn {
+      position: fixed;
+      top: 44px;
+      right: 14px;
+      background-color: #fff;
+      cursor: pointer;
+      color: #0084ff;
+      width: 82px;
+      line-height: 26px;
+      border: 1px solid #e0e0e0;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .graph-company-btn:hover {
+      background-color: #0084ff;
+      cursor: pointer;
+      color: #fff;
+    }</style>
+	</head>
+	<body class=frame-body>
+	<div id=loading class=loading loading></div>
+	<div class=graph-canvas-warp>
+		<canvas id=canvas-render style="width: 100vw;height: 100vh" resize></canvas>
+		<div class=graph-time-line-legends>
+			<div class=human><i></i> 自然人</div>
+			<div class=company><i></i> 公司</div>
+		</div>
+		<div class="graph-company-btn hide" id=downloadGraph>下载</div>
+	</div>
+	<script src=js/relation-company.js></script>
+	<script>
+	companyRelation.initData(1101625042);
+	</script>
+	</body></html>

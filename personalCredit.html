@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人信用</title>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"/>
+
+    <script src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/nav_style.css" rel="stylesheet" type="text/css">
+    <link href="css/personalCredit.css" rel="stylesheet" type="text/css">
+
+<style>
+		body {
+		font-family:"微软雅黑" !important;
+	}
+	</style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="menu startM"><a href="index.html">总体概况</a></li>
+        <li class="menu"><a href="twoPages.html">平台服务</a></li>
+        <li class="menu"><a href="professionCredit.html">行业信用</a></li>
+        <li class="title"><h1>克拉玛依信用大数据平台</h1></li>
+        <li class="menu"><a href="enterpriseCredit.html">企业信用</a></li>
+        <li class="menu"><a class="active" href="personalCredit.html">个人信用</a></li>
+        <li class="menu"><a href="sixPagesCopy.html">资源信用</a></li>
+    </ul>
+</nav>
+
+<div class="top-div">
+<div class="left-div block-div clearfix">
+    <p class="blue">重点人群类型统计</p>
+    <div id="chartP5L1"></div>
+</div>
+
+    <div class="search-div">
+        <input type="text" class="rightInput" id="IDCard" placeholder="请输入身份证">
+        <img class="searchImg" src="images/search.png" alt="">
+    </div>
+
+<div class="right-div block-div clearfix">
+    <p class="blue">重点人群详情</p>
+    <div class="smallSearch-div clearfix">
+        <input type="text" class="company" placeholder="请输入单位名称查看数据归集详情">
+        <select name="profession" id="profession" class="profession">
+            <option value="会计师">会计师</option>
+            <option value="程序员">程序员</option>
+        </select>
+    </div>
+    <div class="table-div" id="P5Table1">
+	<table class="table-div" contenteditable="true"   id="myTb">
+	</table></div>
+</div>
+
+</div>
+
+<div class="bottom-div block-div" id="P5Bottom">
+    <p class="blue">失信人口</p>
+    <p class="shiXing">失信人口<span id="shixingrenkou">300</span>人</p>
+    <div class="bottomChart-div" id="chartP5B1"></div>
+    <div class="bottomChart-div" id="chartP5B2"></div>
+    <div class="bottomChart-div" id="chartP5B3"></div>
+</div>
+
+
+<script src="js/initHeight.js"></script>
+<script src="js/util.js"></script>
+<script src="js/personalCredit.js"></script>
+</body>
+</html>

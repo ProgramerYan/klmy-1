@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>企业信用</title>
+	
+	<link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="js/jquery/2.0.0/jquery.min.js"></script>
+    <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+
+    <script src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/nav_style.css" rel="stylesheet" type="text/css">
+    <link href="css/enterpriseCredit.css" rel="stylesheet" type="text/css">
+	
+	<style>
+		body {
+		font-family:"微软雅黑" !important;
+	}
+	</style>
+
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li class="menu startM"><a href="index.html">总体概况</a></li>
+        <li class="menu"><a href="twoPages.html">平台服务</a></li>
+        <li class="menu"><a href="professionCredit.html">行业信用</a></li>
+        <li class="title"><h1>克拉玛依信用大数据平台</h1></li>
+        <li class="menu"><a class="active" href="enterpriseCredit.html">企业信用</a></li>
+        <li class="menu"><a href="personalCredit.html">个人信用</a></li>
+        <li class="menu"><a href="sixPagesCopy.html">资源信用</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <div class="left-div">
+        <div class="block-div">
+            <p class="blue">经营状态分析</p>
+            <div id="P4L1" class="leftChart-div"></div>
+        </div>
+        <div class="block-div">
+            <p class="blue">行业分类</p>
+            <div id="P4L2" class="leftChart-div"></div>
+        </div>
+    </div>
+	
+	<div class="search-div">
+        <input type="text" class="rightInput" id="IDCard" placeholder="请输入企业名称">
+        <img class="searchImg" src="images/search.png" alt="">
+    </div>
+
+    <div class="center-div">
+        <p class="blue">知识产权</p>
+
+        <div class="center-small-div">
+            <p class="desc">资质总数<span class="blueNum" id="QYXY_ZZZS">456</span>人</p>
+            <div id="P4C1" class="centerChart-div"></div>
+        </div>
+
+        <div class="center-small-div">
+            <p class="desc">专利总数<span class="blueNum" id="QYXY_ZLZS">456</span>人</p>
+            <div id="P4C2" class="centerChart-div"></div>
+        </div>
+
+        <div class="center-small-div">
+            <p class="desc">商标总数<span class="blueNum" id="QYXY_SBZS">456</span>人</p>
+            <div id="P4C3" class="centerChart-div"></div>
+        </div>
+
+        <div class="center-small-div">
+            <p class="desc">著作权总数<span class="blueNum" id="QYXY_ZZQZS">456</span>人</p>
+            <div id="P4C4" class="centerChart-div"></div>
+        </div>
+    </div>
+
+    <div class="right-div block-div">
+        <p class="blue">企业预警</p>
+        <div class="rightTop-div">
+            <div class="first"></div>
+            <div class="map">
+				<div class="z zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk  ">
+                        <span class="t">克拉玛依区</span>
+                        <span class="s">企业总数</span><span class="s">3200</span><span class="s1">家</span>
+                        <span class="s">信用等级下降</span><span class="s">3200</span><span class="s">家</span>
+                        <span class="s">发生失信行为</span><span class="s">3200</span><span class="s">个</span>
+                    </div>
+
+                </div>
+
+                <div class="zq zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk">
+                        <span class="t">乌尔禾区</span>
+                        <span class="s">企业总数</span><span class="s">3200</span><span class="s1">家</span>
+                        <span class="s">信用等级下降</span><span class="s">3200</span><span class="s">家</span>
+                        <span class="s">发生失信行为</span><span class="s">3200</span><span class="s">个</span>
+                    </div>
+
+                </div>
+
+                <div class="zw zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk ">
+                        <span class="t">白碱滩区</span>
+                        <span class="s">企业总数</span><span class="s">3200</span><span class="s1">家</span>
+                        <span class="s">信用等级下降</span><span class="s">3200</span><span class="s">家</span>
+                        <span class="s">发生失信行为</span><span class="s">3200</span><span class="s">个</span>
+                    </div>
+
+                </div>
+
+                <div class="ze zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk">
+                        <span class="t">独山子区</span>
+                        <span class="s">企业总数</span><span class="s">3200</span><span class="s1">家</span>
+                        <span class="s">信用等级下降</span><span class="s">3200</span><span class="s">家</span>
+                        <span class="s">发生失信行为</span><span class="s">3200</span><span class="s">个</span>
+                    </div>
+
+                </div>
+			</div>
+        </div>
+        <div class="rightcenter-div">
+            <table contenteditable="true" id="QYYJ_TABLE"></table>
+        </div>
+
+        <div class="rightBottom-div" id="P4R1"></div>
+    </div>
+
+     <div class="bottom-div">
+        <div class="block-div">
+            <p class="blue">双公示</p>
+            <div class="table-div">
+                <div>
+                    <span data-toggle="modal" data-target="#xzxuke">行政许可</span>
+                    <span data-toggle="modal" data-target="#xzchufa">行政处罚</span>
+                </div>
+                
+				<div class="BP">
+                <table contenteditable="true" id="XZXK_TABLE"> </table></div>
+                <div class="BP">
+                <table contenteditable="true" id="XZCF_TABLE"> </table></div>
+
+
+            </div>
+        </div>
+        <div class="block-div">
+            <p class="blue">失信企业</p>
+            <table contenteditable="true" id="SXQY_TABLE"></table>
+        </div>
+        <div class="block-div">
+            <p class="blue">评级信息</p>
+            <table contenteditable="true" id="PJXX_TABLE"></table>
+        </div>
+    </div>
+</div>
+
+<!-- 模态框（Modal） -->
+<!--行政许可-->
+<div class="modal double-public-modal fade" id="xzxuke" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 40rem;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    双公示
+                </h4>
+            </div>
+            <div class="modal-body">
+                <button class="permission active">行政许可</button>
+                <button class="punish">行政处罚</button>
+                <div class="mode-permission">
+                    <div class="screen">
+                        <label>单位名称:</label><input type="text">
+                        <label>类型:</label><input type="text">
+                        <label>等级:</label><input type="text">
+                        <label>许可分类:</label><input type="text">
+                        <label>发证机关:</label><input type="text">
+                        <label>证书状态:</label><input type="text">
+                        <img class="search" src="images/search.png" alt="">
+                    </div>
+                    <table class="permission modalTable">
+                        <thead>
+                        <tr>
+                            <th>公司id</th>
+                            <th>许可证名称</th>
+                            <th>许可证号</th>
+                            <th>范围</th>
+                            <th>起始日期</th>
+                            <th>到期日期</th>
+                            <th>发证日期</th>
+                            <th>类型</th>
+                            <th>发证机关</th>
+                            <th>证书状态</th>
+                            <th>等级</th>
+                            <th>创建时间</th>
+                            <th>公司名称</th>
+                            <th>许可分类</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mode-punish">
+                    <div class="screen">
+                        <label>单位名称:</label><input type="text">
+                        <label>出发决定日期:</label><input type="text">
+                        <label>类型:</label><input type="text">
+                        <label>决定机关:</label><input type="text">
+                        <img class="search" src="images/search.png" alt="">
+                    </div>
+                    <table class="punish modalTable">
+                        <thead>
+                        <tr>
+                            <th>公司名称</th>
+                            <th>行政处罚决定书文号</th>
+                            <th>注册号</th>
+                            <th>法定代表人</th>
+                            <th>违法行为类型</th>
+                            <th>违法行为</th>
+                            <th>作出行政处罚决定机关名称</th>
+                            <th>作出行政处罚决定日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!--行政处罚-->
+<div class="modal double-public-modal fade" id="xzchufa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 40rem;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel2">
+                    双公示
+                </h4>
+            </div>
+            <div class="modal-body">
+                <button class="permission active">行政许可</button>
+                <button class="punish">行政处罚</button>
+                <div class="mode-permission">
+                    <div class="screen">
+                        <label>单位名称:</label><input type="text">
+                        <label>类型:</label><input type="text">
+                        <label>等级:</label><input type="text">
+                        <label>许可分类:</label><input type="text">
+                        <label>发证机关:</label><input type="text">
+                        <label>证书状态:</label><input type="text">
+                        <img class="search" src="images/search.png" alt="">
+                    </div>
+                    <table class="permission2 modalTable">
+                        <thead>
+                        <tr>
+                            <th>公司id</th>
+                            <th>许可证名称</th>
+                            <th>许可证号</th>
+                            <th>范围</th>
+                            <th>起始日期</th>
+                            <th>到期日期</th>
+                            <th>发证日期</th>
+                            <th>类型</th>
+                            <th>发证机关</th>
+                            <th>证书状态</th>
+                            <th>等级</th>
+                            <th>创建时间</th>
+                            <th>公司名称</th>
+                            <th>许可分类</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mode-punish">
+                    <div class="screen">
+                        <label>单位名称:</label><input type="text">
+                        <label>出发决定日期:</label><input type="text">
+                        <label>类型:</label><input type="text">
+                        <label>决定机关:</label><input type="text">
+                        <img class="search" src="images/search.png" alt="">
+                    </div>
+                    <table class="punish2 modalTable">
+                        <thead>
+                        <tr>
+                            <th>公司名称</th>
+                            <th>行政处罚决定书文号</th>
+                            <th>注册号</th>
+                            <th>法定代表人</th>
+                            <th>违法行为类型</th>
+                            <th>违法行为</th>
+                            <th>作出行政处罚决定机关名称</th>
+                            <th>作出行政处罚决定日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<script>
+
+
+        var z2dh = document.querySelectorAll('.z2dh');
+        var kdh = document.querySelectorAll('.kdh');
+        var zcontent = document.querySelectorAll('.zcontent');
+        adddonghua();
+        removeClassName();
+        var t2;
+
+        function adddonghua() {
+
+            z2dh[0].onmouseover = function () {
+                z2dh[0].classList.add('z2');
+                t2 = setTimeout(function () {
+                    kdh[0].classList.add('k1');
+                    kdh[0].classList.remove('initk');
+                } );
+            }
+            z2dh[1].onmouseover = function () {
+                z2dh[1].classList.add('z2');
+                t2 = setTimeout(function () {
+                    kdh[1].classList.add('k2');
+                    kdh[1].classList.remove('initk');
+                });
+            }
+            z2dh[2].onmouseover = function () {
+                z2dh[2].classList.add('z2');
+                t2 = setTimeout(function () {
+                    kdh[2].classList.add('k3');
+                    kdh[2].classList.remove('initk');
+                });
+            }
+            z2dh[3].onmouseover = function () {
+                z2dh[3].classList.add('z2');
+                t2 = setTimeout(function () {
+                    kdh[3].classList.add('k4');
+                    kdh[3].classList.remove('initk');
+                });
+            }
+        }
+
+        function removeClassName() {
+            for (var i = 0; i < zcontent.length; i++) {
+                zcontent[i].onmouseleave = function () {
+                    for (var k = 0; k < zcontent.length; k++) {
+                        z2dh[k].classList.remove('z2');
+                        kdh[k].classList.remove('k1');
+                        kdh[k].classList.remove('k2');
+                        kdh[k].classList.remove('k3');
+                        kdh[k].classList.remove('k4');
+                        kdh[k].classList.add('initk');
+                        clearTimeout(t2)
+                    }
+                }
+            }
+        }
+		
+		
+		
+		
+		 var data = ['11', '12', '13', '14', '15', '11', '12', '13', '14', '15', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14',
+            '21', '22', '23', '24', '25', '21', '22', '23', '24', '25', '11', '12', '13', '14'];
+        var data2 = ['21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23',
+            '21', '22', '23', '24', '25', '21', '22', '23'];
+
+        //创建td
+        createTable(14, 10, 'table.permission', data);
+        createTable(8, 9, 'table.punish', data2);
+
+        createTable(14, 10, 'table.permission2', data);
+        createTable(8, 9, 'table.punish2', data2);
+        function createTable(tdNum, trNum, parentNodeName, data) {
+            var aTd = [];
+            var count = 0;
+            var tbody = document.querySelector(parentNodeName + ' tbody');
+            for (var j = 0; j < trNum; j++) {
+                var tr = document.createElement('tr');
+                tr.className = (j % 2 == 0) ? 'double' : 'single';
+                for (var k = 0; k < tdNum; k++) {
+                    var td = document.createElement('td');
+
+                    tr.appendChild(td);
+                    aTd.push(td);
+                    aTd[count].innerHTML = data[count];
+                    count++;
+                }
+                tbody.appendChild(tr);
+            }
+        }
+        //按钮切换
+        var permission = document.querySelectorAll('button.permission');
+        var punish = document.querySelectorAll('button.punish');
+        var perMode = document.querySelectorAll('.mode-permission');
+        var punMode = document.querySelectorAll('.mode-punish');
+        for(let k = 0; k < permission.length; k++) {
+            permission[k].onclick = function () {
+                perMode[k].style.display = 'block';
+                punMode[k].style.display = 'none';
+                this.className = 'active';
+                punish[k].className = '';
+            };
+            punish[k].onclick = function () {
+                perMode[k].style.display = 'none';
+                punMode[k].style.display = 'block';
+                this.className = 'active';
+                permission[k].className = '';
+            };
+        }
+
+		</script>
+<script src="js/initHeight.js"></script>
+<script src="js/util.js"></script>
+<script src="js/enterpriseCredit.js"></script>
+</body>
+</html>

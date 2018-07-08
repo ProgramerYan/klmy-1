@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>总体概况</title>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    
+   <link href="css/nav_style.css" rel="stylesheet" type="text/css">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"/>
+    <script src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<link href="css/index.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery/2.0.0/jquery.min.js"></script>
+	<link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+
+	<style>
+	html {
+            font-size:50px;
+        }
+        html,body{
+            height:100%;
+            margin:0;
+            padding:0;
+            overflow: hidden;
+	
+        }       div,nav {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        p,span,ul,li,h1 {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style-type: none;
+        }
+        body {
+           background-image: url("images/bg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color:white !important;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+			font-family:"微软雅黑";
+       }
+        .select p {
+            margin: 0;
+        }
+
+	</style>
+
+	
+	
+</head>
+<body>
+
+
+<nav>
+    <ul>
+        <li class="menu startM"><a  class="active" href="index.html">总体概况</a></li>
+        <li class="menu"><a href="twoPages.html">平台服务</a></li>
+        <li class="menu"><a href="professionCredit.html">行业信用</a></li>
+        <li class="title"><h1>克拉玛依信用大数据平台</h1></li>
+        <li class="menu"><a href="enterpriseCredit.html">企业信用</a></li>
+        <li class="menu"><a href="personalCredit.html">个人信用</a></li>
+        <li class="menu"><a href="sixPagesCopy.html">资源信用</a></li>
+    </ul>
+</nav>
+
+
+
+<div class="content">
+    <div class="left">
+        <div class="left1">
+            <div class="lefttext small-title ">信用统计归集</div>
+			<div class="leftone">
+                <div class="leftcss1"><div class="leftcs1"></div><div class="leftcs2"><span class="cs1">信用目录</span><span class="cs5">总计</span><span class="cs6" id="XYTJGJ_XYML_NUM">3000</span></div></div>
+                <div class="leftcss2"><div class="leftcs1"></div><div class="leftcs2"><span class="cs1">法人主体</span><span class="cs5">总计</span><span class="cs6"id="XYTJGJ_FRZT_NUM">98631</span>
+				<span class="cs8">覆盖率</span><span class="cs9" id="XYTJGJ_FRZT_FGL">90%</span></div></div>
+            </div>
+            <div class="lefttwo">
+                <div class="leftcss3"><div class="leftcs1"></div><div class="leftcs2"><span class="cs1">信用数据</span><span class="cs5">总计</span><span class="cs6"id="XYTJGJ_XYSJ_NUM">98631</span>
+				<span class="cs8">本月增量</span><span class="cs9"id="XYTJGJ_XYSJ_INCREMENT">90%</span></div></div>
+                <div class="leftcss4"><div class="leftcs1"></div><div class="leftcs2"><span class="cs1">自然人主体</span><span class="cs5">总计</span><span class="cs6" id="XYTJGJ_ZRR_NUM">98631</span>
+				<span class="cs8">覆盖率</span><span class="cs9" id="XYTJGJ_ZRR_FGL">90%</span></div></div>
+            </div>
+        </div>
+    <div class="left2">
+            <div class="lefttext small-title ">信源单位接入</div>
+            <div id="P1L1"></div>
+        <div class="leftb"><div class="leftc"><span class="leftc1">已接入</span><span class="leftc5">未接入</span></div>
+            <div class="leftc"><span class="leftc4">市级</span><span class="leftc2"id="XYDWJR_SJ_YJR_NUM">53</span><span class="leftc2">家</span><span class="leftc3"id="XYDWJR_SJ_WJR_NUM">535</span><span class="leftc3">家</span></div>
+            <div class="leftc"><span class="leftc4">区级</span><span class="leftc2"id="XYDWJR_QJ_YJR_NUM">3</span><span class="leftc2">家</span><span class="leftc3"id="XYDWJR_QJ_WJR_NUM">3</span><span class="leftc3">家</span></div>
+            <div class="leftd"><span class="leftc4">企业</span><span class="leftc2"id="XYDWJR_QY_YJR_NUM">5</span><span class="leftc2">家</span><span class="leftc3"id="XYDWJR_QY_WJR_NUM">3</span><span class="leftc3">家</span></div>
+        </div>
+        </div>
+    <div class="left3">
+            <div class="lefttext small-title ">信用数据质量</div>
+            <div id="P1L2"></div>
+            <div id="P1L3"></div>
+
+        </div>
+    </div>
+<div class="center">
+    <div class="center1">
+        <div class="centertxt"></div>
+        <div class="centertext1"><span class="css small-title ">信用地图</span></div>
+        <div class="centercss ">
+            <div class="first"></div>
+        </div>
+        <div class="map2">
+			
+			 <div class="z zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk">
+                        <span class="t">克拉玛依区</span>
+                        <span class="s">企业总数</span><span class="s" id="KLMYQ_QYZS">32001</span><span class="s">家</span>
+                        <span class="s">社会组织</span><span class="s" id="KLMYQ_SHZZ" >3200</span><span class="s">家</span>
+                        <span class="s">事业单位</span><span class="s" id="KLMYQ_SYDW">3200</span><span class="s">家</span>
+                        <span class="s">个体工商</span><span class="s" id="KLMYQ_GTGSH">3200</span><span class="s">家</span>
+                        <span class="s">自然人</span><span class="e" id="KLMYQ_ZRR">3200</span><span class="f">家</span>
+                    </div>
+
+                </div>
+
+                <div class="ze zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk">
+                        <span class="t">独山子区</span>
+                        <span class="s">企业总数</span><span class="s" id="DSZ_QYZS">32001</span><span class="s">家</span>
+                        <span class="s">社会组织</span><span class="s" id="DSZ_SHZZ" >3200</span><span class="s">家</span>
+                        <span class="s">事业单位</span><span class="s" id="DSZ_SYDW">3200</span><span class="s">家</span>
+                        <span class="s">个体工商</span><span class="s" id="DSZ_GTGSH">3200</span><span class="s">家</span>
+                        <span class="s">自然人</span><span class="e" id="DSZ_ZRR">3200</span><span class="f">家</span>
+                    </div>
+
+                </div>
+
+                <div class="zq zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk">
+                        <span class="t">乌尔禾区</span>
+                        <span class="s">企业总数</span><span class="s" id="WEH_QYZS">32001</span><span class="s">家</span>
+                        <span class="s">社会组织</span><span class="s" id="WEH_SHZZ" >3200</span><span class="s">家</span>
+                        <span class="s">事业单位</span><span class="s" id="WEH_SYDW">3200</span><span class="s">家</span>
+                        <span class="s">个体工商</span><span class="s" id="WEH_GTGSH">3200</span><span class="s">家</span>
+                        <span class="s">自然人</span><span class="e" id="WEH_ZRR">3200</span><span class="f">家</span>
+                    </div>
+
+                </div>
+
+                <div class="zw zcontent">
+                    <div class="z1 z2dh"></div>
+                    <div class="xdh"></div>
+                    <div class="kdh initk">
+                        <span class="t">白碱滩区</span>
+                        <span class="s">企业总数</span><span class="s" id="BJT_QYZS">32001</span><span class="s">家</span>
+                        <span class="s">社会组织</span><span class="s" id="BJT_SHZZ" >3200</span><span class="s">家</span>
+                        <span class="s">事业单位</span><span class="s" id="BJT_SYDW">3200</span><span class="s">家</span>
+                        <span class="s">个体工商</span><span class="s" id="BJT_GTGSH">3200</span><span class="s">家</span>
+                        <span class="s">自然人</span><span class="e" id="BJT_ZRR">3200</span><span class="f">家</span>
+                    </div>
+
+                </div>
+            </div>
+          
+    </div>
+
+    <div class="center2">
+        <div class="centertext1"><span class="css1 small-title ">信用服务</span></div>
+        <div class="centertest1"><span class="ces1 small-title ">异议处理</span></div>
+        <div class="centere"><div class="centee"><div class="centertec">信用档案查询累计<div class="righttec"></div><span class="tee1"id="XYFW_DAXC_NUM">38000</span><span class="tee">次</span></div>
+        <div class="centertec1">信用报告打印累计<div class="righttec"></div><span class="tee1" id="XYFW_BGDY_NUM">38000</span><span class="tee">次</span></div></div>
+        <div class="centec"><div class="centertec2">平台注册企业量<div class="righttec"></div><span class="tee1" id="XYFW_ZCQY_NUM">500</span><span class="tee">家</span></div>
+        <div class="centertec3">门户访问次数累计<div class="righttec"></div><span class="tee1"id="XYFW_MHFW_NUM">11000</span><span class="tee">次</span></div></div>
+        </div>
+        <div id="P1C1"></div>
+    </div>
+</div>
+<div class="right">
+    <div class="right1">
+        <div class="righttext2"><span class="css2" id="double-public" data-toggle="modal" data-target="#myModal">双公示</span></div>
+        <div class="righttxt">行政许可<div class="righttec"></div><span class="tec1" id="SGS_XZXK_NUM">500</span><span class="tece">项</span></div>
+        <div class="righttxt1">行政处罚<div class="righttec"></div><span class="tec1" id="SGS_XZCF_NUM">300</span><span class="tece">项</span></div>
+        <div id="P1R1"></div>
+        <div id="P1R2"></div>
+    </div>
+    <div class="right2">
+        <div class="righttext2"><span class="css2 small-title ">联合惩戒</span></div>
+        <div class="righttxt">失信企业<div class="righttec"></div><span class="tec1" id="LHCJ_SXQY_NUM">200</span><span class="tece">家</span></div>
+        <div class="righttxt1">失信个人<div class="righttec"></div><span class="tec1" id="LHCJ_SXGR_NUM">80</span><span class="tece">人</span></div>
+        <div id="P1R3"></div>
+    </div>
+    <div class="right3">
+        <div class="righttext3"><span class="css2 small-title ">企业信用评级</span></div>
+        <div id="P1R4"></div>
+    </div>
+</div>
+
+	<!-- 模态框（Modal） -->
+<!--双公示-->
+<div class="modal double-public-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" style="width: 40rem;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    双公示
+                </h4>
+            </div>
+            <div class="modal-body">
+                <button class="permission active">行政许可</button>
+                <button class="punish">行政处罚</button>
+                <div class="mode-permission">
+                    <div class="screen">
+                        <label>单位名称:</label><input type="text">
+                        <label>类型:</label><input type="text">
+                        <label>等级:</label><input type="text">
+                        <label>许可分类:</label><input type="text">
+                        <label>发证机关:</label><input type="text">
+                        <label>证书状态:</label><input type="text">
+                        <img class="search" src="images/search.png" alt="">
+                    </div>
+                    <table class="permission">
+                        <thead>
+                        <tr>
+                            <th>公司id</th>
+                            <th>许可证名称</th>
+                            <th>许可证号</th>
+                            <th>范围</th>
+                            <th>起始日期</th>
+                            <th>到期日期</th>
+                            <th>发证日期</th>
+                            <th>类型</th>
+                            <th>发证机关</th>
+                            <th>证书状态</th>
+                            <th>等级</th>
+                            <th>创建时间</th>
+                            <th>公司名称</th>
+                            <th>许可分类</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mode-punish">
+                    <div class="screen">
+                        <label>单位名称:</label><input type="text">
+                        <label>出发决定日期:</label><input type="text">
+                        <label>类型:</label><input type="text">
+                        <label>决定机关:</label><input type="text">
+                        <img class="search" src="images/search.png" alt="">
+                    </div>
+                    <table class="punish">
+                        <thead>
+                        <tr>
+                            <th>公司名称</th>
+                            <th>行政处罚决定书文号</th>
+                            <th>注册号</th>
+                            <th>法定代表人</th>
+                            <th>违法行为类型</th>
+                            <th>违法行为</th>
+                            <th>作出行政处罚决定机关名称</th>
+                            <th>作出行政处罚决定日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script src="js/initHeight.js"></script>
+<!--<script src="js/H1.js"></script>-->
+<script src="js/util.js"></script>
+<script src="js/index.js"></script>
+</body>

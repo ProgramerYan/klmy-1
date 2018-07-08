@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信用目录</title>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <!--<link href="css/base.css" rel="stylesheet" type="text/css">-->
+    <link href="css/nav_style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"/>
+    <script src="js/echarts.js"></script>
+    <link href="css/Page6.css" rel="stylesheet" type="text/css">
+
+    <style>
+	body {
+		font-family:"微软雅黑" !important;
+		}
+        html,body{
+            height:100%;
+            margin:0;
+            padding:0;
+            overflow: hidden;
+        }
+
+        div,nav {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        p,span,ul,li,h1 {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style-type: none;
+        }
+        body {
+            background-image: url("images/bg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color:white;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+		
+        }
+
+        /*nav*/
+        nav {
+            width: 100%;
+            background-image: url("images/top1.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 40px;
+            margin-top: 10px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            right: 1.5rem;
+        }
+        nav ul li {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        nav ul li.menu {
+            margin-top:0.5rem;
+            font-size: 0.6rem;
+            position: relative;
+            top: 10px;
+            left:0.2rem;
+            background-color: rgba(19, 29, 60, 0.6);
+            border:1px solid  rgba(19, 29, 60, 0.6);
+            border-radius:5px;
+   
+
+        }
+        nav ul li.menu1 {
+            margin-top:0.5rem;
+            font-size: 0.6rem;
+            position: relative;
+            top: 10px;
+            right:1.1rem;
+            background-color: rgba(19, 29, 60, 0.6);
+            border:1px solid  rgba(19, 29, 60, 0.6);
+            border-radius:5px;
+            font-family: MicrosoftYaHei;
+
+        }
+        nav ul li .select {
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            left: 1.5rem;
+            font-size: 0.44rem;
+            color: #1dd7de;
+            top:15px;
+
+        }
+        nav ul li .select select {
+            width: 3rem;
+            margin-left:10px;
+            background-color: white;
+            text-align: center;
+        }
+        nav ul li.title h1{
+            margin-top:7px;
+            font-size: 0.88rem;
+            color: #63e4ff;
+        }
+        nav ul li.title {
+            width: 15.5rem;
+            text-align: center;
+            position: relative;
+            top: -10px;
+        }
+        li.startM {
+            margin-left: 1rem;
+            font-family: MicrosoftYaHei;
+            color: #71edff;
+        }
+    </style>
+
+</head>
+<body>
+
+
+<nav>
+    <ul>
+        <li class="menu startM"><a href="index.html">总体概况</a></li>
+        <li class="menu"><a href="twoPages.html">平台服务</a></li>
+        <li class="menu"><a href="professionCredit.html">行业信用</a></li>
+        <li class="title"><h1>克拉玛依信用大数据平台</h1></li>
+        <li class="menu"><a href="enterpriseCredit.html">企业信用</a></li>
+        <li class="menu"><a href="personalCredit.html">个人信用</a></li>
+        <li class="menu"><a class="active" href="sixPagesCopy.html">资源信用</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <div class="left">
+        <div class="lefttop">
+            <div class="lefttop1"><span class="lefttop1txt">部门</span></div>
+            <div class="lefttop2"><span class="lefttop1txt">主题</span></div>
+        </div>
+        <div class="leftbottom"></div>
+    </div>
+    <div class="center">
+        <div class="centertop">
+            <div class="centertopa"><span class="centertopa1"><span>【</span><span id="DANWEI_NAME">市局统计</span><span>】</span>数据共<span class="centertopa1" id="DANWEI_ZIYUANBIAO_NUM">50</span>种资源表，共<span class="centertopa1" id="ZIDUANXIANG_NUM">400</span>个字段项</span></div>
+            <div class="centertopa2">
+                <input class="so" type="search" name="search1"/>
+                <span class="so1"> <input class="so3" type="submit" value="" id="stb"></span>
+                <input class="so2"type="submit" value="部门检索" />
+                <input class="so2"type="submit" value="资源检索" />
+            </div>
+        </div>
+        <div class="centertop1">
+        </div>
+        <div class="centertop2">
+            <div class="centertopb"><span class="centertopb1">共享方式</span></div>
+            <div class="centertopb"><button class="centertopb2" id="FTJGX_BTN">非条件共享</button></div>
+            <div class="centertopb"><button class="centertopb2" id="TJGX_BTN">条件共享</button></div>
+            <div class="centertopb"><button class="centertopb2" id="BGX_BTN">不共享</button></div>
+        </div>
+
+    </div>
+    <div class="right" ></div>
+</div>
+
+
+<script src="js/initHeight.js"></script>
+<script src="js/util.js"></script>
+<script src="js/sixPage.js"></script>
+<!--<script src="js/H1.js"></script>-->
+
+
+</body>

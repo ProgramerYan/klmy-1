@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>Bootstrap 实例 - 条纹表格</title>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<table class="table table-bordered table-hover" contenteditable="true"   id="myTb">
+
+</table>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var json = { 'columns': [{ 'FieldID': 'Column1', 'Title': 'Info Header 1' }, { 'FieldID': 'Column2', 'Title': 'Info Header2' }, { 'FieldID': 'Column3', 'Title': 'Info Header3' }], 'rows': [{ 'Column1': '1A', 'Column2': '1B', 'Column3': '1C' }, { 'Column1': '2A', 'Column2': '2B', 'Column3': '2C' }] };
+       
+		var th;
+		
+        $.each(json.columns, function (colIndex, col) {
+            th+="<th>" + col.Title + "</th>";
+			
+        });
+        $("#myTb").append("<thead><tr>" + th + "</tr></thead>");
+       $("#myTb").append("<tbody id='tbd'></tbody>");
+
+        $.each(json.rows, function (rowIndex, row) {
+            var tr;
+
+            $.each(json.columns, function (colIndex,col) {
+                tr+='<td>'+row[col.FieldID]+'</td>'
+            })
+             
+            $("#tbd").append('<tr>'+tr+'</tr>');
+        });
+         
+    });
+</script>
+
+<!--  <table class="table table-bordered table-hover" contenteditable="true" id="tb">
+	<thead>
+		<tr>
+			<th>编号</th>
+			<th>产品</th>
+			<th>交付时间</th>
+			<th>状态</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>TB - Monthly</td>
+			<td>01/04/2012</td>
+			<td>Default</td>
+		</tr>
+		<tr class="success">
+			<td>1</td>
+			<td>TB - Monthly</td>
+			<td>01/04/2012</td>
+			<td>Approved</td>
+		</tr>
+		<tr class="error">
+			<td>2</td>
+			<td>TB - Monthly</td>
+			<td>02/04/2012</td>
+			<td>Declined</td>
+		</tr>
+		<tr class="warning">
+			<td>3</td>
+			<td>TB - Monthly</td>
+			<td>03/04/2012</td>
+			<td>Pending</td>
+		</tr>
+		<tr class="info">
+			<td>4</td>
+			<td>TB - Monthly</td>
+			<td>04/04/2012</td>
+			<td>Call in to confirm</td>
+		</tr>
+	</tbody> 
+</table>  -->
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信用目录</title>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <!--<link href="css/base.css" rel="stylesheet" type="text/css">-->
+    <link href="css/nav_style.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"/>
+    <script src="js/echarts.js"></script>
+
+    <style>
+	body {
+		font-family:"微软雅黑" !important;
+        html,body{
+            height:100%;
+            margin:0;
+            padding:0;
+            overflow: hidden;
+        }
+
+        div,nav {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        p,span,ul,li,h1 {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style-type: none;
+        }
+        body {
+            background-image: url("images/bg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color:white;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        /*nav*/
+        nav {
+            width: 100%;
+            background-image: url("images/top1.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 40px;
+            margin-top: 10px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            right: 1.5rem;
+        }
+        nav ul li {
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        nav ul li.menu {
+            margin-top:0.5rem;
+            font-size: 0.6rem;
+            position: relative;
+            top: 10px;
+            left:0.2rem;
+            background-color: rgba(19, 29, 60, 0.6);
+            border:1px solid  rgba(19, 29, 60, 0.6);
+            border-radius:5px;
+            font-family: MicrosoftYaHei;
+
+        }
+        nav ul li.menu1 {
+            margin-top:0.5rem;
+            font-size: 0.6rem;
+            position: relative;
+            top: 10px;
+            right:1.1rem;
+            background-color: rgba(19, 29, 60, 0.6);
+            border:1px solid  rgba(19, 29, 60, 0.6);
+            border-radius:5px;
+            font-family: MicrosoftYaHei;
+
+        }
+        nav ul li .select {
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            left: 1.5rem;
+            font-size: 0.44rem;
+            color: #1dd7de;
+            top:15px;
+
+        }
+        nav ul li .select select {
+            width: 3rem;
+            margin-left:10px;
+            background-color: white;
+            text-align: center;
+        }
+        nav ul li.title h1{
+            margin-top:7px;
+            font-size: 0.88rem;
+            color: #63e4ff;
+        }
+        nav ul li.title {
+            width: 15.5rem;
+            text-align: center;
+            position: relative;
+            top: -10px;
+        }
+        li.startM {
+            margin-left: 1rem;
+            font-family: MicrosoftYaHei;
+            color: #71edff;
+        }
+        .content{
+            margin-top:20px;
+            height:88%;
+            width:51.25rem;
+        }
+        .left{
+            float:left;
+            display:inline;
+            margin-top:10px;
+            margin-left:10px;
+            height:98.8%;
+            width:15rem;
+            border:1px solid rgba(6, 104, 186, 0.5);
+            background-image: url("images/left4.png");
+            background-size:14.95rem 100%;
+            background-repeat: no-repeat;
+        }
+        .center{
+            float:left;
+            display:inline;
+            height:15%;
+            width:35rem;
+            margin-top:10px;
+            margin-left:10px;
+        }
+        .right{
+            float:left;
+            display:inline;
+            height:82.5%;
+            width:35rem;
+            margin-top:10px;
+            margin-left:10px;
+            background-image: url("images/right.png");
+            background-size:35rem 100%;
+            background-repeat: no-repeat;
+        }
+        .lefttop{
+            float:left;
+            display:inline;
+            height: 12%;
+            width:14.2rem;
+            margin-top:10px;
+            margin-left:10px;
+        }
+        .lefttop1{
+            float:left;
+            display:inline;
+            height: 55%;
+            width:4rem;
+            text-align:center;
+            margin-top:15px;
+            margin-left:60px;
+            background-color:#d10000;
+        }
+        .lefttop2{
+            float:left;
+            display:inline;
+            height: 55%;
+            width:4rem;
+            text-align:center;
+            margin-top:15px;
+            margin-left:60px;
+            background-color:#2998fd;
+        }
+
+        .leftbottom{
+            float:left;
+            display:inline;
+            height:84.2%;
+            width:14.25rem;
+            margin-top:20px;
+            margin-left:10px;
+        }
+        .leftbottom1{
+            float:left;
+            display:inline;
+            height:95%;
+            width:10.25rem;
+            margin-top:20px;
+            margin-left:55px;
+        }
+        .centertop{
+            float:left;
+            display:inline;
+            height:42%;
+            width:34.5rem;
+            margin-top:-1px;
+            margin-left:5px;
+        }
+        .centertop1{
+            float:left;
+            display:inline;
+            height:2%;
+            width:34.5rem;
+            margin-top:5px;
+            margin-left:5px;
+            border:1px solid rgba(6, 104, 186, 0.5);
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #2f404d;
+
+        }
+        .centertop2{
+            float:left;
+            display:inline;
+            height:42%;
+            width:34.5rem;
+            margin-top:5px;
+            margin-left:5px;
+        }
+        .righttop{
+            float:left;
+            display:inline;
+            height: 32%;
+            width:34.5rem;
+            margin-top:5px;
+            margin-left:5px;
+        }
+        .leftbottom2{
+            float:left;
+            display:inline;
+            height: 8.35%;
+            width:6.5rem;
+            margin-left:65px;
+            text-align:center;
+            border:1px solid ;
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #1d2836;
+        }
+        .leftbottom3{
+            float:left;
+            display:inline;
+            height: 8.35%;
+            width:6.5rem;
+            margin-left:65px;
+            text-align:center;
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #060b21;
+        }
+        .leftbottom4{
+            text-align:center;
+            float:left;
+            display:inline;
+            height: 8.35%;
+            width:6.5rem;
+            margin-left:65px;
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #060b21;
+        }
+        .leftbottom5{
+            text-align:center;
+            float:left;
+            display:inline;
+            height: 8.35%;
+            width:6.5rem;
+            margin-left:65px;
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #060b21;
+        }
+        .leftbottom6{
+            text-align:center;
+            float:left;
+            display:inline;
+            height: 8.35%;
+            width:6.5rem;
+            margin-left:65px;
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #060b21;
+        }
+        .leftbottom7{
+            text-align:center;
+            float:left;
+            display:inline;
+            height: 8.35%;
+            width:6.5rem;
+            margin-left:65px;
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #060b21;
+        }
+        .leftbottom8{
+            text-align:center;
+            float:left;
+            display:inline;
+            height: 8.35%;
+            width:6.5rem;
+            margin-left:65px;
+            border-top-color: #060b21;
+            border-left-color: #060b21;
+            border-right-color: #060b21;
+            border-bottom-color: #060b21;
+        }
+        .centertopa{
+            float:left;
+            display:inline;
+            height: 100%;
+            width:17.2rem;
+        }
+        .centertopa2{
+            float:left;
+            display:inline;
+            height: 100%;
+            width:17.2rem;
+        }
+        .centertopb{
+            float:left;
+            display:inline;
+            height: 100%;
+            width:4rem;
+        }
+        .righttopa{
+            float:left;
+            display:inline;
+            height: 20%;
+            width:6.8rem;
+        }
+        .righttopa2{
+            float:left;
+            display:inline;
+            height: 20%;
+            width:6.8rem;
+            background-image: url("images/center3.png");
+        }
+        .righttopa3{
+            float:left;
+            display:inline;
+            height: 20%;
+            width:6.8rem;
+        }
+        .righttopa4{
+            float:left;
+            display:inline;
+            height: 20%;
+            width:6.8rem;
+        }
+        .righttopa5{
+            float:left;
+            display:inline;
+            height: 20%;
+            width:6.8rem;
+        }
+        .leftbottom9txt{
+            font-size:15px;
+            color:#7ba3c3;
+        }
+        .centertopa1{
+            font-size:20px;
+        }
+        .centertopb1{
+            display:block;
+            font-size:20px;
+            margin-left:12px;
+            margin-top:5px;
+        }
+        .centertopb2{
+            display:block;
+            font-size:20px;
+            margin-left:12px;
+            margin-top:5px;
+            text-align:center;
+            background-color:#004686;
+        }
+        .so{
+            margin-left:25px;
+            height:63%;
+            width:9rem;
+        }
+        .so1{
+            display:inline-block;
+            margin-left:-16.5px;
+            height: 80%;
+            width:0.8rem;
+        }
+        .so3{
+            display:block;
+            margin-top:-8px;
+            margin-left:-16.5px;
+            height: 80%;
+            width:1rem;
+            background-image: url("images/search.png");
+            background-size:0.95rem 100%;
+            background-repeat: no-repeat;
+            border-width:0;
+        }
+        .so2{
+            background-color:#2998fd;
+            height:60%;
+            width:2.9rem;
+            border-width:0;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<nav>
+    <ul>
+        <li class="menu startM"><a href="First page.html">总体概况</a></li>
+        <li class="menu"><a href="#">品台服务</a></li>
+        <li class="menu"><a href="#">行业信用</a></li>
+        <li class="title"><h1>克拉玛依信用大数据平台</h1></li>
+        <li class="menu"><a href="#">企业信用</a></li>
+        <li class="menu"><a href="#">个人信用</a></li>
+        <li class="menu"><a class="active" href="Sixth pages.html">资源目录</a></li>
+    </ul>
+</nav>
+<div class="content">
+    <div class="left">
+        <div class="lefttop">
+            <div class="lefttop1"><span class="lefttop1txt">部门</span></div>
+            <div class="lefttop2"><span class="lefttop1txt">主题</span></div>
+        </div>
+        <div class="leftbottom">
+            <div class="leftbottom1">
+                <div class="leftbottom2"><span class="leftbottom9txt">市统计局</span></div>
+                <div class="leftbottom3"><span class="lefttop1txt">300,000万亿</span></div>
+                <div class="leftbottom2"><span class="leftbottom9txt">市统计局</span></div>
+                <div class="leftbottom4"><span class="lefttop1txt">300,000万亿</span></div>
+                <div class="leftbottom2"><span class="leftbottom9txt">市统计局</span></div>
+                <div class="leftbottom5"><span class="lefttop1txt">300,000万亿</span></div>
+                <div class="leftbottom2"><span class="leftbottom9txt">市统计局</span></div>
+                <div class="leftbottom6"><span class="lefttop1txt">300,000万亿</span></div>
+                <div class="leftbottom2"><span class="leftbottom9txt">市统计局</span></div>
+                <div class="leftbottom7"><span class="lefttop1txt">300,000万亿</span></div>
+                <div class="leftbottom2"><span class="leftbottom9txt">市统计局</span></div>
+                <div class="leftbottom8"><span class="lefttop1txt">300,000万亿</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="center">
+        <div class="centertop">
+            <div class="centertopa">
+                <span class="centertopa1">【市局统计】数据共<span class="centertopa1">50</span>种资源表，共<span class="centertopa1">400</span>个字段项</span>
+            </div>
+            <div class="centertopa2">
+                <input class="so" type="search" name="search1"/>
+                <span class="so1"> <input class="so3" type="submit" value="" id="stb"></span>
+                <input class="so2"type="submit" value="部门检索" />
+                <input class="so2"type="submit" value="资源检索" />
+            </div>
+        </div>
+        <div class="centertop1">
+        </div>
+        <div class="centertop2">
+            <div class="centertopb">
+                <span class="centertopb1">共享方式</span>
+            </div>
+            <div class="centertopb">
+                <span class="centertopb2">非条件共享</span>
+            </div>
+            <div class="centertopb">
+                <span class="centertopb2">条件共享</span>
+            </div>
+            <div class="centertopb">
+                <span class="centertopb2">不共享</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="right">
+    </div>
+</div>
+
+
+<script src="js/initHeight.js"></script>
+<!--<script src="js/H1.js"></script>-->
+
+
+</body>

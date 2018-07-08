@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>平台服务</title>
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <script src="js/echarts.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes"/>
+    <link href="css/nav_style.css" rel="stylesheet" type="text/css">
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/twoPages.css" rel="stylesheet" type="text/css">
+
+   
+    <style>
+        html {
+            font-size:50px;
+        }
+        html,body{
+            height:100%;
+            margin:0;
+            padding:0;
+            overflow: hidden;
+        }
+
+        div {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        p,span,ul,li,h1 {
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            list-style-type: none;
+        }
+        body {
+            background-image: url("images/bg.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            color:white;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+			font-family:"微软雅黑" !important;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li class="menu startM"><a href="index.html">总体概况</a></li>
+        <li class="menu"><a class="active" href="twoPages.html">平台服务</a></li>
+        <li class="menu"><a href="professionCredit.html">行业信用</a></li>
+        <li class="title"><h1>克拉玛依信用大数据平台</h1></li>
+        <li class="menu"><a href="enterpriseCredit.html">企业信用</a></li>
+        <li class="menu"><a href="personalCredit.html">个人信用</a></li>
+        <li class="menu"><a href="sixPagesCopy.html">资源信用</a></li>
+    </ul>
+</nav>
+
+
+<div class="content">
+    <div class="right">
+        <div class="right-top">
+            <div  class="top-title">
+                <span class="title">接入单位<span class="num" id="JRDW_NUM">53</span>家</span>
+            </div>
+            <div  class="top-center">
+                <span class="top-content">累计</span>
+                <span class="top-content1">入库总量</span>
+                <span class="top-num" id="LJRK_NUM">1000000</span>
+                <span class="dw">条</span><br>
+                <span class="top-content">本周</span>
+                <span class="top-content1">入库总量</span>
+                <span class="top-num" id="BZRK_NUM">1000000</span>
+                <span class="dw">条</span><br>
+                <span class="top-content">本月</span>
+                <span class="top-content1">入库总量</span>
+                <span class="top-num" id="BYRK_NUM">1000000</span>
+                <span class="dw">条</span><br>
+                <span class="top-content">本季</span>
+                <span class="top-content1">入库总量</span>
+                <span class="top-num" id="BJRK_NUM">1000000</span>
+                <span class="dw">条</span>
+            </div>
+        </div>
+        <div class="right-center">
+            <button class="center-1">报告查询量</button>
+            <button class="center-2">月数据交换量</button>
+            <button class="center-3">数据质量排名</button>
+            <div id="P2R1">
+            </div>
+        </div>
+
+    </div>
+    <div class="center">
+        <div class="center-top">
+            <img src="images/blackhole.png" id="img" class="ops-blackhole" style="display: block; width: 0px; height: 0px; animation: rotates 3s linear infinite; position: fixed; z-index: -1; left: 0; top: 0; right: 0; bottom: 0; margin: auto; padding: 0;">
+        </div>
+    </div>
+    <div class="left">
+        <div class="left-top">
+            <div class="left-1"><span class="top-text small-title ">门户网站系统</span></div>
+            <div class="left-2"></div>
+        </div>
+        <div class="left-foot">
+            <div class="left-center">
+                <div class="left-1"><span class="top-text small-title ">信用报告系统</span></div>
+                <div class="left-center-1">
+                    <div class="left-center-content">
+                        <span class="left-center-text1">累计访问量</span>
+                    </div>
+                    <div class="left-center-content">
+                        <span class="left-center-text1">报告下载量</span>
+                    </div>
+                    <div class="left-center-content">
+                        <span class="left-center-text2" ><span id="XTBG_FW_NUM">200,000</span><span></span></span>
+                    </div>
+                    <div class="left-center-content">
+                        <span class="left-center-text2" ><span id="XTBG_XZ_NUM">200,000</span><span></span></span>
+                    </div>
+
+                </div>
+            </div>
+            <div class="left-bottom">
+                <div class="left-1"><span class="top-text small-title ">微信公众号</span></div>
+                <div class="left-center-1">
+                    <div class="left-center-content">
+                        <span class="left-center-text1">信息发布量</span>
+                    </div>
+                    <div class="left-center-content">
+                        <span class="left-center-text1">累计访问量</span>
+                    </div>
+                    <div class="left-center-content">
+                        <span class="left-center-text2" ><span id="WXGZ_FB_NUM">200,000</span><span></span></span>
+                    </div>
+                    <div class="left-center-content">
+                        <span class="left-center-text2" ><span id="WXGZ_FW_NUM">200,000</span><span></span></span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="foot">
+        <div class="foot-title">
+            <span class="foot-text small-title ">信用数据质量</span>
+            <div class="so">
+                <input class="so1" type="search" name="search1"/>
+          
+            </div>
+        </div>
+        <div class="biao">
+            <table contenteditable="true" id="XYSJZL_TABLE"></table>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script src="js/initHeight.js"></script>
+<script src="js/util.js"></script>
+<script src="js/twoPages.js"></script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行业信用</title>
+
+    <script src="js/echarts.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/nav_style.css" rel="stylesheet" type="text/css">
+    <link href="css/professionCredit.css" rel="stylesheet" type="text/css">
+<style>
+		body {
+		font-family:"微软雅黑" !important;
+	}
+	</style>
+
+</head>
+<body>
+
+<nav>
+    <ul>
+       <li class="menu startM"><a href="index.html">总体概况</a></li>
+        <li class="menu"><a href="twoPages.html">平台服务</a></li>
+        <li class="menu"><a class="active" href="professionCredit.html">行业信用</a></li>
+        <li class="title"><h1>克拉玛依信用大数据平台</h1></li>
+        <li class="menu"><a href="enterpriseCredit.html">企业信用</a></li>
+        <li class="menu"><a href="personalCredit.html">个人信用</a></li>
+        <li class="menu"><a href="sixPagesCopy.html">资源信用</a></li>
+    </ul>
+</nav>
+
+
+<div class="left-div block-div">
+    <div class="left">
+        <p class="blue">市场监督</p>
+        <p class="yaoshi">执业药师</p>
+        <p class="yaoShiNum"><span id="HYXY_ZYYS_NUM">412</span>人</p>
+        <div class="search">
+            <input type="text" placeholder="请输入编号或药师姓名">
+            <img src="images/search.png" alt="">
+        </div>
+
+        <div id="chartP3L1"></div>
+    </div>
+    <div class="center">
+        <p class="blue">企业分布</p>
+        <div id="chartP3L2"></div>
+    </div>
+    <div class="right">
+        <p class="blue topP">食品企业</p>
+        <p class="blue bottomP">药品企业</p>
+        <div id="chartP3L3"></div>
+        <div id="chartP3L4"></div>
+    </div>
+</div>
+
+<div class="right-div block-div">
+    <p class="blue">安全生产</p>
+    <p>
+        <span class="red">一级</span>
+        <span class="yellow">二级</span>
+        <span class="blue">三级</span>
+    </p>
+    <p>
+        <span><span id="HYXY_AQSC_YJ_NUM">476</span>人</span>
+        <span><span id="HYXY_AQSC_EJ_NUM">476</span>人</span>
+        <span><span id="HYXY_AQSC_SJ_NUM">476</span>人</span>
+    </p>
+
+    <div class="table-div">
+        <table contenteditable="true" id="AQSC_TABLE">
+            
+        </table>
+    </div>
+</div>
+
+<div class="bottom-div block-div">
+
+    <div class="desc per">
+        <p class="blue">工程建设</p>
+        <p class="qiye">企业共计<span id="qiyeNum">3000</span>家</p>
+        <div class="bottom first"></div>
+    </div>
+
+    <div class="chart-div per">
+        <p class="blue">各类企业平均信用得分统计</p>
+        <div id="chartP3B1" class="bottom"></div>
+    </div>
+
+    <div class="chart-div per">
+        <p class="blue">各区现场打分情况统计</p>
+        <div id="chartP3B2" class="bottom"></div>
+    </div>
+
+    <div class="chart-div per">
+        <p class="blue">企业纳税情况统计</p>
+        <div id="chartP3B3" class="bottom">
+
+        </div>
+    </div>
+
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/professionCredit.js"></script>
+</body>
+</html>

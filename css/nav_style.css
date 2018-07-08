@@ -1,0 +1,50 @@
+nav {
+  width: 100%;
+  background-image: url("../images/nav_bg.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 2rem;
+  margin-top: 0px; }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 1.5rem; }
+    nav ul li {
+      display: inline-block;
+      vertical-align: bottom; }
+      nav ul li.title h1 {
+        font-size: 0.88rem;
+        color: #63e4ff; }
+      nav ul li.title {
+        width: 15.5rem;
+        text-align: center;
+        position: relative; }
+      nav ul li.startM {
+        margin-left: 2.5rem; }
+      nav ul li.menu {
+        font-size: .6rem;
+        position: relative;
+        top: .8rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; }
+      nav ul li .select {
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        left: 1.5rem;
+        font-size: 0.44rem;
+        color: #18adb3; }
+        nav ul li .select select {
+          width: 3.64rem;
+          background-color: white;
+          text-align: center; }
+      nav ul li a.active {
+        color: #5fc7d9 !important; }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        background-color: #1b348d;
+        padding: 2px 8px;
+        border-radius: 6px; }

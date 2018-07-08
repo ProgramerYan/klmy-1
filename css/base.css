@@ -1,0 +1,88 @@
+html {
+    font-size: 50px;
+}
+
+div, nav {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+p, span, ul, li, h1 {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+/*公共div设置start*/
+.block-div {
+    display: inline-block;
+    padding: 10px;
+    background-image: url("../images/block_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid #043a69;
+    background-color: #060e2a;
+}
+
+.blue {
+    color: #39a9c9;
+    text-align: left;
+}
+
+input,
+select {
+    padding: 7px;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid white;
+    outline: none;
+}
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    background-image: url("../images/bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    margin: 0;
+    color: white;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*公共div设置end*/
+
+/*  字体大小 */
+.blue,
+.small-title {
+    font-size: .48rem !important;
+}
+/*first数字大小*/
+.first p.number span {
+    font-size: .4rem;
+}
+/*first标题大小*/
+.first .block span.describe {
+    font-size: .3rem !important;
+}
+
+
+
+.top-div {
+    position: relative;
+    height: 50%;
+}
